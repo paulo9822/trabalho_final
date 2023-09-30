@@ -1,0 +1,22 @@
+#body {
+    width: 80%;
+    margin-left: 10%;
+    display: flex;
+}
+
+.div-grafico {
+    width: 50%;
+    margin: 1em;
+    padding: 1em;
+    border-radius: 0.5em;
+    box-shadow: 0.1em 0.1em 1.5em 0em;
+}
+
+.filtros {
+    display: flex;
+}
+
+.filtro {
+    width: 100%;
+    margin-inline: 1em;
+}
