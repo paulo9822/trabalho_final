@@ -11,5 +11,6 @@ header = Div(
             className='header-img',
             src=f'data:image/png;base64,{image.decode()}'
         )
+        'Trabalho de Paulo Cesar'
     ]
 )
