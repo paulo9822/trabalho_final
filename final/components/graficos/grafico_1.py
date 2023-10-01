@@ -1,57 +1,62 @@
 from dash.html import Div
 from dash.dcc import Graph, Dropdown
 
-# id_venda
-# entregue
-# nome_produto
-# quantidade
-# preco_produto
-# custo_produto
-
 grafico_1 = Div(
-    className = 'div-grafico',
-    children = [
+    className='div-grafico',
+    children=[
         Div(
-            className = 'filtros',
-            children = [
+            className='filtros',
+            children=[
                 Div(
-                    className = 'filtro',
-                    children = [
+                    className='filtro',
+                    children=[
                         Dropdown(
-                            id = 'dropdown_name_grafico_1',
-                            options = [
-                               { 'label': 'Produto', 'value': 'nome_produto' },
-                               { 'label': 'Preço', 'value': 'preco_produto' },
-                               { 'label': 'Custo', 'value': 'custo_produto' }
+                            id='dropdown_name_grafico_1',
+                            options=[
+                                {'label': 'Produtos', 'value': 'nome_produto'},
+                                {'label': 'Mouse', 'value': 'Mouse'},
+                                {'label': 'Teclado', 'value': 'Teclado'},
+                                {'label': 'Monitor', 'value': 'Monitor'},
+                                {'label': 'Desktop', 'value': 'Desktop'},
+                                {'label': 'Processador', 'value': 'Processador'}
                             ],
-                            value = 'nome_produto',
-                            searchable = False,
-                            clearable = False
+                            value='nome_produto',
+                            searchable=False,
+                            clearable=False
                         ),
                     ]
                 ),
                 Div(
-                    className = 'filtro',
-                    children = [
+                    className='filtro',
+                    children=[
                         Dropdown(
-                            id = 'dropdown_value_grafico_1',
-                            options = [
-                               { 'label': 'Entregue', 'value': 'entregue' },
-                               { 'label': 'Quantidade', 'value': 'quantidade' },
+                            id='dropdown_value_grafico_1',
+                            options=[
+                                {'label': 'Entregue', 'value': 1},
+                                {'label': 'Não entregue', 'value': 0},
+                                {'label': 'Preço', 'value': 'preco_produto'},
+                                {'label': 'Custo', 'value': 'custo_produto'},
+                                {'label': 'Quantidade vendida', 'value': 'quantidade'}
                             ],
-                            value = 'entregue',
-                            searchable = False,
-                            clearable = False
+                            value='filtro',
+                            searchable=False,
+                            clearable=False
                         ),
+                        Dropdown(
+                            id='dropdown_funcao_grafico_1',
+                            options=['Soma', 'Média'],
+                            value='Soma',
+                            clearable=False
+                        )
                     ]
                 ),
             ]
         ),
         Div(
-            className = 'grafico',
-            children = [
+            className='grafico',
+            children=[
                 Graph(
-                    id = 'grafico_1'
+                    id='grafico_1'
                 )
             ]
         ),

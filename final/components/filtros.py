@@ -7,8 +7,8 @@ filtros = Div(
         RangeSlider(
             id = 'global_intervalo_id_venda',
             min = 0,
-            max = 10,
-            value = [0,10]
+            max = 100,
+            value = [0,100]
         )
     ]
 )
